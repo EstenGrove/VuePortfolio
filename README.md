@@ -1,18 +1,23 @@
-# vue-portfolio
+# VuePortfolio
 
 > An updated SPA- version of my web portfolio using Vue.js
 
-## Build Setup
+#### Tasks
+- [ ] Implement Dark/Light Theme Changing
+  - [ ] Use Vuex for Theme State Management
+- [ ] Finish "Projects" page
+  - [ ] Build "Projects" Section with sortable functionality based off tech stack.
+- [ ] Create SingleProject pages for in-depth details regarding each project.
+- [ ] Implement on-scroll animations 
+  - [ ] Trigger Charts creation on-scroll
 
-``` bash
-# install dependencies
-npm install
+#### Pre-Deployment Checklist
+- [ ] Test for WCAG Standards.
+- [ ] Optimize and minify code and images.
+- [ ] Cross-browser test for bugs.
+- [ ] Run page-speed test.
+  - [ ] Use GtMetrix and Lighthouse.
+- [ ] Test thru HTML validator for Semantic HTML.
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
-```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
