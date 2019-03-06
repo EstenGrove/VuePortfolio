@@ -2,6 +2,8 @@
 
 > An updated SPA- version of my web portfolio using Vue.js
 
+![vueportfolio-opt](https://user-images.githubusercontent.com/41505038/53915569-6ee15080-401d-11e9-8974-4e0675016227.gif)
+
 #### Tasks
 - [ ] Implement Dark/Light Theme Changing
   - [ ] Use Vuex for Theme State Management
