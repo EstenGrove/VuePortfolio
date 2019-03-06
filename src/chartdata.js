@@ -19,7 +19,8 @@ export const chartData = {
     }]
   },
   options: {
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
+    responsive: true,
     scales: {
       yAxes: [{
         stacked: true,
@@ -33,7 +34,8 @@ export const chartData = {
           display: false
         }
       }]
-    }
+    },
+    events: [null]
   }
 }
 
