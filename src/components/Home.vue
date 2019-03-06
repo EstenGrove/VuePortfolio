@@ -71,13 +71,23 @@ $lightBlue: #5cbcea;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  #home-wrapper {
+    max-width: 100vw;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .homeTitle {
     width: 100%;
     font-size: 7rem;
+    text-align: center;
   }
   .homeSub {
     width: 100%;
     font-size: 5.5rem;
+    text-align: center;
   }
 }
 </style>
