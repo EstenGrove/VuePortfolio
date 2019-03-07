@@ -1,31 +1,33 @@
-<template>
-  <div id="about-wrapper">
-    <h1 id="pageTitle">About</h1>
-    <main class="aboutContainer">
-      <div class="aboutContainer-img">
-        <div class="aboutContainer-img__display"></div>
-      </div>
-      <article class="about">
-        <p
-          class="about-text"
-        >How's it going? My name's Steve. I'm a front-end developer based in Tempe, AZ. Coding is a passion of mine and tends to occupy the bulk of my time when I'm not recording music or spending time with my girlfriend. I've always had a curiousity for tech and have worked in just about every field involved and tangential to the industry including: tech support, server adminstration, DevOps and web developer. Heck, I even served some time as a Manager of a Radioshack a while back.</p>
-        <p
-          class="about-text"
-        >I'm completely self-taught. I pride myself in my ability to stay up-to-date with current technologies and growing my skillset infinitly larger. Currently I'm working a lot with Vue and Express.js. Building Single Page Applications with a RESTful API endpoint within Node. The two frameworks operate with an inherent cohesive ease, which makes the tech stack all the more enjoyable.</p>
-      </article>
-      <div class="arrowIcon">
-        <svg id="icon" @click="scrollDown" class="pulse">
-          <use xlink:href="/src/assets/sprite.svg#icon-chevron-with-circle-down"></use>
-        </svg>
-      </div>
-    </main>
-    <section class="chartWrapper">
-      <h2 class="chartWrapper-title">Skills</h2>
-      <div class="chartContainer">
-        <canvas id="chart"></canvas>
-      </div>
-    </section>
-  </div>
+<template name="fade" enter-active-class="fadein">
+  <transition>
+    <div id="about-wrapper">
+      <h1 id="pageTitle">About</h1>
+      <main class="aboutContainer">
+        <div class="aboutContainer-img">
+          <div class="aboutContainer-img__display"></div>
+        </div>
+        <article class="about">
+          <p
+            class="about-text"
+          >How's it going? My name's Steve. I'm a front-end developer based in Tempe, AZ. Coding is a passion of mine and tends to occupy the bulk of my time when I'm not recording music or spending time with my girlfriend. I've always had a curiousity for tech and have worked in just about every field involved and tangential to the industry including: tech support, server adminstration, DevOps and web developer. Heck, I even served some time as a Manager of a Radioshack a while back.</p>
+          <p
+            class="about-text"
+          >I'm completely self-taught. I pride myself in my ability to stay up-to-date with current technologies and growing my skillset infinitly larger. Currently I'm working a lot with Vue and Express.js. Building Single Page Applications with a RESTful API endpoint within Node. The two frameworks operate with an inherent cohesive ease, which makes the tech stack all the more enjoyable.</p>
+        </article>
+        <div class="arrowIcon">
+          <svg id="icon" @click="scrollDown" class="pulse">
+            <use xlink:href="/src/assets/sprite.svg#icon-chevron-with-circle-down"></use>
+          </svg>
+        </div>
+      </main>
+      <section class="chartWrapper">
+        <h2 class="chartWrapper-title">Skills</h2>
+        <div class="chartContainer">
+          <canvas id="chart"></canvas>
+        </div>
+      </section>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -110,6 +112,29 @@ $lightBlue: #5cbcea;
       background-position: center;
       background-size: cover;
     }
+  }
+}
+
+.fadein {
+  animation: fadein 0.5s ease-in;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadein {
+  animation: fadein 0.5s ease-in;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /////////////////////////////////////////////////////////////////////////////////////

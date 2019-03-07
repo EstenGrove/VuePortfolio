@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navbar></navbar>
+
     <router-view></router-view>
+
     <index></index>
   </div>
 </template>
@@ -50,5 +52,40 @@ html {
 #app {
   max-width: 100vw;
   height: 100vh;
+}
+
+.expand {
+  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: tracking-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.8em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>

@@ -1,11 +1,14 @@
 <template>
-  <div id="home-wrapper">
-    <h1 class="homeTitle">
-      Hi, my name is
-      <a class="homeTitle blue">Steve Gore</a>.
-    </h1>
-    <h3 class="homeSub">I'm a Front-End Web Developer.</h3>
-  </div>
+  <transition name="fade" enter-active-class="expand" leave-active-class="fadeout">
+    <div id="home-wrapper">
+      <h1 class="homeTitle" :key="animated">
+        Hi, my name is
+        <a class="homeTitle blue" :key="animated2">Steve Gore</a>.
+      </h1>
+
+      <h3 class="homeSub">I'm a Front-End Web Developer.</h3>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -17,8 +20,18 @@ export default {
   },
   name: "Home",
   data() {
-    return {};
-  }
+    return {
+      animated: false,
+      animated2: false
+    };
+  },
+  methods: {
+    startAni() {
+      this.animated = true;
+      this.animated2 = true;
+    }
+  },
+  mounted() {}
 };
 </script>
 
@@ -46,10 +59,46 @@ $lightBlue: #5cbcea;
   font-size: 2.5rem;
   font-weight: 300;
   color: #f4f4f4;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .blue {
   color: $lightBlue;
+}
+////////////////////////////////
+// ANIMATIONS
+.expand {
+  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: tracking-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 565px) {
   #home-wrapper {
